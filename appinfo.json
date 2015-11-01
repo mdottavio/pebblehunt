@@ -8,8 +8,7 @@
   "longName": "pebbleHunt",
   "projectType": "pebblejs",
   "resources": {
-  "media": [
-    {
+    "media": [{
       "menuIcon": true,
       "type": "png",
       "name": "logo",
@@ -18,8 +17,7 @@
       "type": "png",
       "name": "error",
       "file": "images/error.png"
-    }
-  ]
+    }]
   },
   "sdkVersion": "3",
   "shortName": "pebbleHunt",
