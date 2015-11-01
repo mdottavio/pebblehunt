@@ -1,36 +1,57 @@
-
 {
-  "appKeys": {},
-  "capabilities": [
-    ""
-  ],
-  "companyName": "dottavio@gmail.com",
-  "longName": "pebbleHunt",
-  "projectType": "pebblejs",
-  "resources": {
-    "media": [{
-      "menuIcon": true,
-      "type": "png",
-      "name": "logo",
-      "file": "images/logo.png"
-    }, {
-      "type": "png",
-      "name": "error",
-      "file": "images/error.png"
-    }]
-  },
-  "sdkVersion": "3",
-  "shortName": "pebbleHunt",
-  "targetPlatforms": [
-    "aplite",
-    "basalt"
-  ],
-  "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
-  "versionCode": 1,
-  "versionLabel": "1.0",
-  "watchapp": {
-    "watchface": false
-  }
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "dottavio@gmail.com",
+    "longName": "pebbleHunt",
+    "projectType": "pebblejs",
+    "resources": {
+        "media": [
+            {
+                "file": "images/menu_icon.png",
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            },
+            {
+                "file": "images/logo.png",
+                "menuIcon": true,
+                "name": "IMAGES_LOGO_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/error.png",
+                "name": "IMAGES_ERROR_PNG",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "pebbleHunt",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "hiddenApp": false,
+        "watchface": false
+    }
 }
-
-
