@@ -1,27 +1,38 @@
 
 {
-  "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
-  "shortName": "pebbleHunt",
+  "appKeys": {},
+  "capabilities": [
+    ""
+  ],
+  "companyName": "dottavio@gmail.com",
   "longName": "pebbleHunt",
-  "companyName": "@mdottavio",
+  "projectType": "pebblejs",
+  "resources": {
+  "media": [
+    {
+      "menuIcon": true,
+      "type": "png",
+      "name": "logo",
+      "file": "images/logo.png"
+    }, {
+      "type": "png",
+      "name": "error",
+      "file": "images/error.png"
+    }
+  ]
+  },
+  "sdkVersion": "3",
+  "shortName": "pebbleHunt"
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
   "versionCode": 1,
   "versionLabel": "1.0",
   "watchapp": {
     "watchface": false
-  },
-  "appKeys": {},
-  "resources": {
-    "media": [
-      {
-        "menuIcon": true,
-        "type": "png",
-        "name": "logo",
-        "file": "images/logo.png"
-      }, {
-        "type": "png",
-        "name": "error",
-        "file": "images/error.png"
-      }
-    ]
   }
 }
+
+
