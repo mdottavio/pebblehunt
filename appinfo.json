@@ -1,0 +1,22 @@
+
+{
+  "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
+  "shortName": "pebbleHunt",
+  "longName": "pebbleHunt",
+  "companyName": "@mdottavio",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {},
+  "resources": {
+    "media": [
+      {
+        "type": "png",
+        "name": "error",
+        "file": "images/error.png"
+      }
+    ]
+  }
+}
