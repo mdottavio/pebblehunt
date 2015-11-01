@@ -22,7 +22,7 @@
   ]
   },
   "sdkVersion": "3",
-  "shortName": "pebbleHunt"
+  "shortName": "pebbleHunt",
   "targetPlatforms": [
     "aplite",
     "basalt"
