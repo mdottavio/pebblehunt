@@ -5,5 +5,6 @@ module.exports = {
     logo: 'images/logo.png',
     error: 'images/error.png'
   },
+  postLimit: 10,
   useFullScreen : true
 };

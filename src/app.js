@@ -1,24 +1,30 @@
 var UI = require('ui');
 var config = require('./config');
-var errorCard = require('./errorCard');
-var ph = require('./phunt-reader');
+// var errorCard = require('./errorCard');
+// var ph = require('./phunt-reader');
 
 var main = new UI.Card({
   title: 'PebbleHunt',
-  icon: 'images/logo.png',
+  icon: config.images.logo,
   subtitle: 'fetching the latest PHunt posts',
   body: ''
 });
+main.show();
 
-ph.posts(showIndex, showError);
+// var showIndex = function(postsList){
+//   console.log('We have data');
+//   console.log(postsList);
+//   var events = new UI.Menu({
+//     sections: [{
+//       items: postsList
+//     }]
+//   });
+//   events.show();
+// };
 
+// var showError = function(err){
+//   console.log('We have an error', err);
+//   errorCard.show('Ups, something went wrong...');
+// };
 
-var showIndex = function(data){
-  console.log('We have data');
-};
-
-var showError = function(err){
-  console.log('We have an error', err);
-  errorCard.show('Ups, something went wrong...');
-};
-
+// ph.posts(showIndex, showError);

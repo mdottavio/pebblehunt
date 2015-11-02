@@ -1,4 +1,5 @@
 var config = require('./config');
+var UI = require('ui');
 
 var eCard = {
   card: null,
@@ -23,9 +24,9 @@ var eCard = {
       scrollable: true
     });
   }
-}
+};
 
 module.exports = {
-  show: eCard.show
+  show: eCard.show,
   hide: eCard.hide
 };
