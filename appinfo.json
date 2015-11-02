@@ -9,26 +9,6 @@
     "resources": {
         "media": [
             {
-                "file": "images/menu_icon.png",
-                "name": "IMAGE_MENU_ICON",
-                "type": "png"
-            },
-            {
-                "file": "images/logo_splash.png",
-                "name": "IMAGE_LOGO_SPLASH",
-                "type": "png"
-            },
-            {
-                "file": "images/tile_splash.png",
-                "name": "IMAGE_TILE_SPLASH",
-                "type": "png"
-            },
-            {
-                "file": "fonts/UbuntuMono-Regular.ttf",
-                "name": "MONO_FONT_14",
-                "type": "font"
-            },
-            {
                 "file": "images/logo.png",
                 "menuIcon": true,
                 "name": "IMAGES_LOGO_PNG",
@@ -44,8 +24,7 @@
     "sdkVersion": "3",
     "shortName": "pebbleHunt",
     "targetPlatforms": [
-        "aplite",
-        "basalt"
+        "aplite"
     ],
     "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
     "versionCode": 1,
