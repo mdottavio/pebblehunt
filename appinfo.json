@@ -4,29 +4,50 @@
         ""
     ],
     "companyName": "dottavio@gmail.com",
-    "longName": "pebbleHunt",
+    "longName": "PebbleHunt",
     "projectType": "pebblejs",
     "resources": {
         "media": [
             {
-                "file": "images/logo.png",
-                "menuIcon": true,
-                "name": "IMAGES_LOGO_PNG",
+                "file": "images/menu_icon.png",
+                "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
             {
-                "file": "images/error.png",
-                "name": "IMAGES_ERROR_PNG",
+                "file": "images/logo_splash.png",
+                "name": "IMAGE_LOGO_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "png"
+            },
+            {
+                "file": "fonts/UbuntuMono-Regular.ttf",
+                "name": "MONO_FONT_14",
+                "type": "font"
+            },
+            {
+                "file": "images/phunt.png",
+                "menuIcon": true,
+                "name": "IMAGES_PHUNT_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/voteup.png",
+                "name": "IMAGES_VOTEUP_PNG",
                 "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
-    "shortName": "pebbleHunt",
+    "shortName": "PebbleHunt",
     "targetPlatforms": [
-        "aplite"
+        "aplite",
+        "basalt"
     ],
-    "uuid": "2cc192cb-4db8-4ba3-8d87-3029fe7b55df",
+    "uuid": "690d7ce6-9507-4315-8094-5e594e96e3ae",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
