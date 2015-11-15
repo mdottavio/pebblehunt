@@ -13,10 +13,10 @@ var menu = require('./menu.js');
 var thePostMenu;
 
 splash.show();
-// ph.getPosts(function(posts){
-//   splash.hide();
-//   thePostMenu = menu.create(posts);
-//   thePostMenu.show();
-// }, function(){
-//   error.show('fetching the posts..');
-// });
+ph.getPosts(function(posts){
+  splash.hide();
+  thePostMenu = menu.create(posts);
+  thePostMenu.show();
+}, function(){
+  error.show('fetching the posts..');
+});

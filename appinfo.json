@@ -29,14 +29,14 @@
                 "type": "font"
             },
             {
-                "file": "images/phunt.png",
-                "menuIcon": true,
-                "name": "IMAGES_PHUNT_PNG",
+                "file": "images/voteup.png",
+                "name": "IMAGES_VOTEUP_PNG",
                 "type": "png"
             },
             {
-                "file": "images/voteup.png",
-                "name": "IMAGES_VOTEUP_PNG",
+                "file": "images/phunt.png",
+                "menuIcon": true,
+                "name": "IMAGES_PHUNT_PNG",
                 "type": "png"
             }
         ]
