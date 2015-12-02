@@ -4,8 +4,9 @@ var UI = require('ui');
 var config = require('./config');
 var postCard = require('./card-post');
 
+// global post list :S
+
 var menuHandler = function(){
-  var postList;
   
   // parse Post data into Menu Items
   var parsetPosts = function(posts){
@@ -16,7 +17,8 @@ var menuHandler = function(){
       postList.push({
         title: post.name, 
         subtitle: post.tagline, 
-        original: post
+        original: post,
+        voted: false
       });
     }
     return postList;
@@ -24,17 +26,17 @@ var menuHandler = function(){
   
   /** create a Menu based on posts **/
   var createMenu = function(posts){
-    postList = posts;
-    var items = parsetPosts(posts.slice(0, config.postLimit));
+    postList = parsetPosts(posts.slice(0, config.postLimit));
     var theMenu = new UI.Menu({
       sections: [{
         title: 'Today\'s posts on PH',
-        items: items
+        items: postList
       }]
     });
     
     theMenu.on('select', function(e) {
-      postCard.showPost(e.item.original);
+//       postCard.showPost(e.item.original);
+      postCard.showPost(e.itemIndex);
     });
     return theMenu;
   };

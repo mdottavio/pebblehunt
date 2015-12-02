@@ -1,5 +1,5 @@
-var ajax = require('ajax');
 var config = require('./config');
+var request = require('./request');
 
 
 var ph = function(){
@@ -35,36 +35,33 @@ var ph = function(){
       color: "#f5a623"
     }
   ];
-  var request = function(requestData, callback, failback){
-    requestData.endpoint = requestData.endpoint || '';
-    ajax({
-      url: config.apiBaseUrl + requestData.endpoint,
-      type: 'json',
-      headers :{
-        Authorization : "Bearer "+config.phDevToken
-      }
-    },
-    function(data) {
-      callback(data);
-    },
-    function(error) {
-      // Failure!
-      console.log('Failed fetching data: ' + error);
-      failback(error);
-    });
-  };
   
   //https://api.producthunt.com/v1/docs/posts/posts_index_get_the_tech_posts_of_today
   var getPosts = function(callback, failback){
-    request({endpoint:'posts'}, function(data){
-      callback( data.posts );
-    }, failback);
+    request.jsonp({
+      url: config.apiBaseUrl + 'posts',
+      headers: {
+         Authorization : "Bearer "+config.phDevToken
+      },
+      callback: function(data){
+        callback( data.posts );
+      },
+      failback: failback
+    });
   };
-  
   
   //https://api.producthunt.com/v1/docs/categories/categories_index_list_of_all_categories
   var getCategories = function(callback, failback){
-    request({endpoint:'categories'}, callback, failback);
+    request.jsonp({
+      url: config.apiBaseUrl + 'categories',
+      headers: {
+         Authorization : "Bearer "+config.phDevToken
+      },
+      callback: function(data){
+        callback( data.posts );
+      },
+      failback: failback
+    });
   };
   
   var getCategory = function(catID){
@@ -77,11 +74,17 @@ var ph = function(){
     return cat;
   };
   
+  var vote = function(post, callback, failback){
+    callback();
+  };
+  
   
   // public methods
   return {
-    getPosts: getPosts,
-    getCategory: getCategory
+    getPosts:      getPosts,
+    getCategory:   getCategory,
+    getCategories: getCategories,
+    vote:          vote
   };
 };
 
