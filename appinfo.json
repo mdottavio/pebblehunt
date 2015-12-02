@@ -29,6 +29,21 @@
                 "type": "font"
             },
             {
+                "file": "images/upwhite.png",
+                "name": "IMAGES_UPWHITE_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/downwhite.png",
+                "name": "IMAGES_DOWNWHITE_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/votedown.png",
+                "name": "IMAGES_VOTEDOWN_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/voteup.png",
                 "name": "IMAGES_VOTEUP_PNG",
                 "type": "png"

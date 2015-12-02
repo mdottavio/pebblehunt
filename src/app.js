@@ -11,6 +11,7 @@ var error = require('./card-error');
 var ph = require('./producthunt-reader.js');
 var menu = require('./menu.js');
 var thePostMenu;
+var postList = [];
 
 splash.show();
 ph.getPosts(function(posts){

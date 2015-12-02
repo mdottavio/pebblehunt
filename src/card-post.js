@@ -3,18 +3,75 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 var postCardConfig = require('./config-postCard.js');
+var ph = require('./producthunt-reader.js');
 
 var postsCard = function(){
   var theScreen;
   var headerText;
+  var voteImage;
   var votesText;
   var subtitleText;
-
+  var actualIndex = 0;
+  
+  
+  var moveUp = function(){
+    if(actualIndex > 0){
+      actualIndex--;
+      updateScreen();
+    }
+  };
+  
+  var moveDown = function(){
+    if(actualIndex < (postList.length - 1)){
+      actualIndex++;
+      updateScreen()
+    }
+  };
+  
+  var markAsVoted = function(){
+    postList[actualIndex].voted = true;
+    votesText.color('white');
+    votesText.backgroundColor('black');
+  };
+  
+  var markAsNoVote = function(){
+    votesText.color('black');
+    votesText.backgroundColor('white');
+  };
+  
+  var updateScreen = function(){
+    if(postList[actualIndex].voted){
+      markAsVoted();
+    } else {
+      markAsNoVote();
+    }
+    headerText.text(postList[actualIndex].original.name);
+    votesText.text(postList[actualIndex].original.votes_count);
+    subtitleText.text(postList[actualIndex].original.tagline);
+  };
+  
+  var vote = function(){
+    if(!postList[actualIndex].voted){
+      ph.vote(postList[actualIndex].original, function(result){
+        markAsVoted();
+      }, function(){
+        error.show('voting the post..');
+      });
+    }    
+  };
   
   var createScreen = function(){
     var mainWindow = new UI.Window({
-      scrollable: true,
+      scrollable: false,
       fullscreen: true
+    });
+    
+    mainWindow.on('click', 'up', function() {
+      moveUp();
+    });
+    
+    mainWindow.on('click', 'down', function() {
+      moveDown();
     });
     
     /** Card background **/
@@ -36,14 +93,14 @@ var postsCard = function(){
     mainWindow.add(headerText);
     
     /**  votes **/
-    var voteImage = new UI.Image({
+    voteImage = new UI.Image({
       position: new Vector2(postCardConfig.margins.left + 6, postCardConfig.margins.top),
       size: new Vector2(16, 16),
-      image: "images/voteup.png"
+      image: postCardConfig.votes.imageup
     });
     votesText = new UI.Text({
       position: new Vector2(postCardConfig.votes.position.left, postCardConfig.votes.position.top),
-      size: new Vector2(postCardConfig.votes.size.width, postCardConfig.votes.size.height - 3),
+      size: new Vector2(postCardConfig.votes.size.width, postCardConfig.votes.size.height),
       font: postCardConfig.votes.font,
       textAlign: 'center',
       color: postCardConfig.title.color
@@ -78,21 +135,13 @@ var postsCard = function(){
     return mainWindow;
   };
   
-  var updateScreen = function(post){
-    headerText.text(post.name);
-    votesText.text(post.votes_count);
-    subtitleText.text(post.tagline);
-  };
-  
-  
-  var showPost = function(post){
+  var showPost = function(index){
     if( !theScreen ){
       theScreen =  createScreen();
     }
-    
-    updateScreen(post);
+    actualIndex = index;
+    updateScreen();
     theScreen.show();
-    
   };
   
   return {
